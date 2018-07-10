@@ -1,0 +1,41 @@
+/* Theme Styles 
+ *
+ * Styles for setting a custom theme for your site
+ ===================================================*/ 
+.logo { padding: 2em; }
+p { font-size: 1.1em }
+.home-head {
+    background-size: cover;
+	background-size: cover;
+    background: url('../assets/images/rupp-drive-brutalism.jpg') no-repeat center center;
+    min-height: 60vh;
+}
+
+.demo-cover-1 { background-image: url('../assets/images/apocalypse-architecture.jpg'); }
+.clip-bg-demo1 {
+    background-image: url('../assets/images/vacation.jpg');
+}
+
+.bold-underline {
+    border-bottom: 5px solid black;
+    display:inline-block;
+}
+
+
+.bold-underline-white {
+    border-bottom: 5px solid white;
+    display:inline-block;
+}
+
+
+.cross-background {
+    background-color: transparent;
+    background-image:
+            -webkit-repeating-linear-gradient(-45deg, black, black 1px, transparent 1px, transparent 14px);
+    background-image:
+            -moz-repeating-linear-gradient(-45deg, black, black 1px, transparent 1px, transparent 14px);
+    background-image:
+            -o-repeating-linear-gradient(-45deg, black, black 1px, transparent 1px, transparent 14px);
+    background-image:
+            repeating-linear-gradient(-45deg, black, black 1px, transparent 1px, transparent 14px);
+}
