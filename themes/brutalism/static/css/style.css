@@ -275,6 +275,7 @@ a:active {
 
 a:hover {
     background: #F3F4F4;
+    text-decoration: underline;
     -moz-transition-property: background;
     -webkit-transition-property: background;
     transition-property: background;
