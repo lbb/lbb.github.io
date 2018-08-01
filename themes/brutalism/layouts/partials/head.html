@@ -1,0 +1,29 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- COMMON TAGS -->
+    <title>{{ .Title }}</title>
+    <!-- Search Engine -->
+    <meta name="description" content="{{ .Description }}">
+    <meta name="image" content="{{ $.Param "image" }}">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="{{ .Title }}">
+    <meta itemprop="description" content="{{ .Description }}">
+    <meta itemprop="image" content="{{ $.Param "image" }}">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="{{ .Title }}">
+    <meta name="og:description" content="{{ .Description }}">
+    {{ if $.Param "image" }}<meta name="og:image" content="{{ .Site.BaseURL}}{{ $.Param "image" }}">{{ end }}
+    <meta name="og:url" content="{{ .Permalink }}">
+    <meta name="og:site_name" content="{{ .Title }}">
+    <meta name="og:type" content="article">
+    <!-- Open Graph - Article -->
+    <meta name="article:tag" content="{{ range .Params.tags }}{{.}} {{end}}">
+    <link rel="stylesheet" type="text/css" href="{{ "css/style.css" | absURL }}">
+    <!-- Google Analytics -->
+    {{ template "_internal/google_analytics_async.html" . }}
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/xcode.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script defer>hljs.initHighlightingOnLoad();</script>
+</head>

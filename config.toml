@@ -1,0 +1,10 @@
+baseURL = "https://realfake.me"
+languageCode = "en-us"
+title = "Luk's"
+
+theme = "brutalism"
+googleAnalytics = ""
+
+[params]
+    navigation = ["blog.md","archives.md"]
+
