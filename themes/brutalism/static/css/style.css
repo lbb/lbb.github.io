@@ -12,6 +12,8 @@ body, li p {
 
 body, p {
     text-align: justify;
+    -webkit-font-smoothing: antialiased;
+    text-wrap: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,6 +24,12 @@ h1, h2, h3, h4, h5, h6 {
 
 header div a {
     font-family: 'Helvetica Neue', sans-serif;
+}
+
+aside + a {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    letter-spacing: -2px;
 }
 
 header {
@@ -82,7 +90,7 @@ header a {
 
 @media all and (max-width: 580px) {
     html {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .content {
@@ -196,10 +204,14 @@ ul, ol {
 }
 
 li {
-    line-height: 1.75em;
     margin-left: 0.75em;
     text-align: left;
     list-style: upper-roman;
+    margin-bottom: .3em;
+}
+
+li + a {
+    background: #000;
 }
 
 li li {
@@ -275,6 +287,10 @@ p a {
     color: #0366d6;
 }
 
+li a {
+    color: #004dc5;
+}
+
 code {
     font-size: 85%;
     margin-bottom: 20px;
@@ -299,10 +315,22 @@ figcaption {
 }
 
 blockquote {
+    border-right: 1px dotted black;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
     border-left: 10px solid #0059ff;
     margin: 0.7em 10px 0.7em 0;
     padding: 0.7em 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 
+blockquote blockquote {
+    border-left: 5px solid #0059ff;
+}
+
+blockquote blockquote blockquote {
+    border-left: 1px dotted black;
 }
 
 blockquote p {

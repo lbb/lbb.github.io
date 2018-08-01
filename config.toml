@@ -1,6 +1,7 @@
 baseURL = "https://realfake.me"
 languageCode = "en-us"
 title = "Luk's"
+enableEmoji = true
 
 theme = "brutalism"
 googleAnalytics = ""

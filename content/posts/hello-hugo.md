@@ -113,7 +113,9 @@ _This is italic text_
 
 
 > Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
+
+> > ...by using additional greater-than signs right next to each other...
+
 > > > ...or with spaces between arrows.
 
 
@@ -165,12 +167,67 @@ Sample text here...
 
 Syntax highlighting
 
-``` js
+```text
 var foo = function (bar) {
   return bar++;
 };
 
 console.log(foo(5));
+```
+
+
+```
+# Update and fetch plugin index.
+$ kubectl plugin update
+
+# Search for plugins
+$ kubectl plugin search servicecat
+service-catalog     Consume services in Kubernetes using the Open S... available
+service-cat-viewer  Show ASCII cat picture for every Service format... installed  
+service-catalog-gke A helper utility for discovering GKE services l... available
+
+$ kubectl plugin info service-cat-viewer
+DESCRIPTION: Show ASCII cat picture for every Service formatet ISO-11801
+URL: https://github.com/oscar-kitty/viewer.git
+
+CAVEATS:
+This plugin needs the following programs:
+* fzf
+* jq
+
+For a better user experience:
+  export $TERM=vt220
+
+# Install the plugin.
+$ kubectl plugin install service-cat-viewer
+Installation (1/1): service-cat-viewer
+Downloading https://github.com/oscar-kitty/viewer.git
+Progress: 100%
+Done!
+
+Plugin Caveats:
+  This plugin needs the following programs:
+  * fzf
+  * jq
+
+  For a better user experience:
+    export $TERM=vt220
+
+# Update all plugins and index
+$ kubectl plugin upgrade
+
+# Update specific plugins
+$ kubectl plugin upgrade foo bar
+
+# uninstall plugin
+$ kubectl plugin remove aws-cat-viewer
+
+# Store the list of installed plugins
+$ kubectl plugin list > deposit.txt
+
+# On a new machine load the plugin list
+$ kubectl plugin install < deposit.txt
+... [Plugin installation output] ...
 ```
 
 ## Tables
@@ -430,60 +487,6 @@ Define a new meta config format called plugin manifest
   description file. 
 
 ### UX and CLI Flow 
-
-```text
-# Update and fetch plugin index.
-$ kubectl plugin update
-
-# Search for plugins
-$ kubectl plugin search servicecat
-service-catalog     Consume services in Kubernetes using the Open S... available
-service-cat-viewer  Show ASCII cat picture for every Service format... installed  
-service-catalog-gke A helper utility for discovering GKE services l... available
-
-$ kubectl plugin info service-cat-viewer
-DESCRIPTION: Show ASCII cat picture for every Service formatet ISO-11801
-URL: https://github.com/oscar-kitty/viewer.git
-
-CAVEATS:
-This plugin needs the following programs:
-* fzf
-* jq
-
-For a better user experience:
-  export $TERM=vt220
-
-# Install the plugin.
-$ kubectl plugin install service-cat-viewer
-Installation (1/1): service-cat-viewer
-Downloading https://github.com/oscar-kitty/viewer.git
-Progress: 100%
-Done!
-
-Plugin Caveats:
-  This plugin needs the following programs:
-  * fzf
-  * jq
-
-  For a better user experience:
-    export $TERM=vt220
-
-# Update all plugins and index
-$ kubectl plugin upgrade
-
-# Update specific plugins
-$ kubectl plugin upgrade foo bar
-
-# uninstall plugin
-$ kubectl plugin remove aws-cat-viewer
-
-# Store the list of installed plugins
-$ kubectl plugin list > deposit.txt
-
-# On a new machine load the plugin list
-$ kubectl plugin install < deposit.txt
-... [Plugin installation output] ...
-```
 
 ### Implementation Details/Notes/Constraints
 
