@@ -8,8 +8,8 @@
     {{ range first 8 .Pages }}
     {{ if eq .Type "posts"}}
     <p>
-        <aside>{{ .Date.Format "January 2, 2006"}}</aside>
-        <a href="{{ .Permalink }}" style="color:black;">{{ .Title }}</a>{{ if .Draft }} <span style="color:#FF4136;">(unpublished)</span>{{ end }}
+        <aside>{{ .Date.Format "January 2, 2006"}}:</aside>
+        <a href="{{ .Permalink }}" style="color:black; margin-left: .5em">{{ .Title }}</a>{{ if .Draft }} <span style="color:#FF4136;">(unpublished)</span>{{ end }}
     </p>
     {{ end }}
     {{ end }}
