@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Prata|Roboto');
-
 ::selection {
     color: white;
     background-color: rgba(0, 0, 0, .99); /* 1. does not work */
@@ -7,7 +5,7 @@
 
 body, li p {
     font-variant-ligatures: common-ligatures;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Latin-Modern', serif;
 }
 
 body, p {
@@ -45,7 +43,7 @@ header {
     left: 0;
     right: 0;
     display: block;
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 0.2rem 0 0.2rem 0;
     border-bottom: 0.10em solid black;
     background: white;
 }
@@ -199,7 +197,7 @@ aside em {
 }
 
 p {
-    margin-bottom: .4em;
+    margin-bottom: 1.4em;
 }
 
 div > p:first-of-type:first-letter {
