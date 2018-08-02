@@ -11,7 +11,7 @@ body, li p {
 }
 
 body, p {
-    text-align: justify;
+    
     -webkit-font-smoothing: antialiased;
     text-wrap: normal;
 }
