@@ -93,6 +93,14 @@ header a {
     html {
         font-size: 19px;
     }
+
+    .content {
+        margin-top: 17px;
+        padding: 5px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        box-sizing: border-box;
+    }
 }
 
 @media all and (max-width: 580px) {
@@ -101,8 +109,10 @@ header a {
     }
 
     .content {
-        margin-top: 3px;
+        margin-top: 8px;
         padding: 5px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
         box-sizing: border-box;
     }
 }
@@ -323,14 +333,10 @@ figcaption {
 }
 
 blockquote {
-    border-right: 1px dotted black;
-    border-top: 1px dotted black;
-    border-bottom: 1px dotted black;
+    border: 1px dotted black;
     border-left: 10px solid #0059ff;
-    margin: 0.7em 10px 0.7em 0;
-    padding: 0.7em 20px;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin: 0.7em 10px 0 0;
+    padding: 0.7em 20px 0;
 }
 
 blockquote blockquote {
