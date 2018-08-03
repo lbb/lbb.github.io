@@ -11,6 +11,8 @@ body, li p {
 body, p {
     -webkit-font-smoothing: antialiased;
     text-wrap: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -156,10 +158,17 @@ div.content {
     padding: 1rem 0 1rem 0;
 }
 
+div.content a {
+    border-bottom: dotted black 1px;
+}
+
 footer {
     margin: auto auto 0 auto;
     width: 100%;
     border-top: solid black 1px;
+}
+footer p {
+    margin: 0 0 0 0;
 }
 
 @media all and (max-width: 520px) {
@@ -190,6 +199,10 @@ aside {
 
 aside a {
     text-decoration: underline double;
+    border-bottom: none !important;
+}
+aside a:hover {
+    border-bottom: none !important;
 }
 
 aside em {
@@ -289,8 +302,7 @@ a:active {
 }
 
 a:hover {
-    background: #F3F4F4;
-    text-decoration: underline;
+    border-bottom: solid black 1px !important;
     -moz-transition-property: background;
     -webkit-transition-property: background;
     transition-property: background;
@@ -299,7 +311,7 @@ a:hover {
     transition-duration: 0.2s;
 }
 
-p a {
+li p a {
     color: #0366d6;
 }
 
