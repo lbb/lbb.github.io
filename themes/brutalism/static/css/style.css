@@ -317,6 +317,7 @@ li p a {
 
 li a {
     color: #004dc5;
+    border-bottom: none !important;
 }
 
 code {
