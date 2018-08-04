@@ -6,8 +6,7 @@ tags: ["setup","intro","ideas","projects"]
 draft: true
 ---
 
-Hello Reader, this shall be the introduction to my blog.
-
+Hello Reader, this shall be the introduction to my blog.  
 As with every Software Engineer at some point in his life, I’d like to share my
 experience working in academia and the industry. I hope that someone will read
 this and learn from my failures and success.
