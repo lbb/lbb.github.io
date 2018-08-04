@@ -1,7 +1,7 @@
 ---
 title: "Mirage OS"
 description: "Cross post from mirgaeOS"
-date: 2018-08-10T12:13:00+02:00
+date: 2018-08-03T12:14:00+02:00
 tags: ["conference", "mirageOS","OCaml", "report"]
 draft: false
 ---
