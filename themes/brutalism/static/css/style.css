@@ -16,7 +16,7 @@ body, p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 1em;
+    margin-top: 1.7em;
     font-family: 'Helvetica Neue', sans-serif;
 }
 
@@ -220,10 +220,6 @@ div > p:first-of-type:first-letter {
     padding-bottom: 0;
     margin-bottom: -0.5em;
     margin-top: -0.25em;
-}
-
-div > h2:first-of-type {
-    margin-top: .2em;
 }
 
 ul, ol {
