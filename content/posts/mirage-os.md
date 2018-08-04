@@ -7,7 +7,7 @@ draft: false
 ---
 
 This is a cross port from the mirgaeOS Blog. We have been on a hack retreat in
-Morocco to hack on an OCaml unikernel Operating System. Go to the official
+Morocco to work on an OCaml unikernel Operating System. Go to the official
 [mirageOS Blog](https://mirage.io/blog/2017-march-hackathon-roundup) to read
 more amazing articles.
 
