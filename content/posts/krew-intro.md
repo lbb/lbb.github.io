@@ -33,7 +33,7 @@ Krew does the following things for you:
 3. Download, verify and install plugins
 4. Keep plugins up-to-date
 
-Where to Start?
+## Where to Start?
 
 Install krew with this gist:
 
@@ -65,12 +65,24 @@ kubectl plugin ca-cert
 
 ## Future
 
-* It is essential for a healthy ecosystem to be versatile. That means, we can't only have a single centralized index (where plugin metadata is stored). We need to implement a model that allows multiple index repositories. That allows users to install plugins which are not necessarily in the "main" default index. Think of it as a PPA or a "brew tap".
-* Another idea is to sync plugins with the cluster. That means whenever you connect to a kubernetes cluster the set of local plugins will adjust to the set of plugins defined in the cluster. The plugin spec was designed to be a kubernetes object. This will allow for such ideas. However, it is still a long way to implement this.
-* We are currently trying to get krew into kubernetes as a constant part of kubectl. We have created a Kubernetes Enhancement Proposal (KEP), which aims to merge krew into kubectl. This means that you'll never have to install krew manually.
+* It is essential for a healthy ecosystem to be versatile. That means, we can't
+  only have a single centralized index (where plugin metadata is stored). We
+  need to implement a model that allows [multiple index repositories](https://github.com/GoogleContainerTools/krew/issues/23). That allows
+  users to install plugins which are not necessarily in the "main" default
+  index. Think of it as a [PPA](https://launchpad.net/ubuntu/+ppas) or a "[brew
+  tap](https://docs.brew.sh/Taps)".
+* Another idea is to sync plugins with the cluster. That means whenever you
+  connect to a kubernetes cluster the set of local plugins will adjust to the
+  set of plugins defined in the cluster. The plugin spec was designed to be a
+  kubernetes object. This will allow for such ideas. However, it is still a long
+  way to implement this.
+* We are currently trying to get krew into kubernetes as a constant part of
+  kubectl. We have created a [Kubernetes Enhancement Proposal
+  (KEP)](https://github.com/kubernetes/community/pull/2340), which aims to merge
+  krew into kubectl. This means that you'll never have to install krew manually.
 
 ## TL;DR
 
 * Krew is not standalone, integrates into kubectl
-* We have an excellent tutorial, check it out!
+* We have an excellent tutorial, [check it out](https://github.com/GoogleContainerTools/krew/blob/master/docs/USER_GUIDE.md)!
 * We need more plugins; the guide comes soon!
