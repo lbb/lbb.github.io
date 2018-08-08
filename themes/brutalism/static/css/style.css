@@ -13,6 +13,7 @@ body, p {
     text-wrap: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
