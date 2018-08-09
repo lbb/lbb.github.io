@@ -221,6 +221,7 @@ div > p:first-of-type:first-letter {
     padding-bottom: 0;
     margin-bottom: -0.5em;
     margin-top: -0.25em;
+    margin-right: 0.1em;
 }
 
 ul, ol {
