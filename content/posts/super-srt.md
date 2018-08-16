@@ -40,10 +40,12 @@ downside that routes won't be synced imidealty or that they are availiable to
 everyone. But using a plugin is great for private users, that just want to
 have the productivity gain.
 
-      |Pro                 |Con
-------|--------------------|--------------
-DNS   |Instant Global Sync | Hard To Setup
-Plugin|Easy To Setup       |No or Slow Sync
+
+|      |Pro                 |Con
+|------|--------------------|--------------
+|DNS   |Instant Global Sync |Hard To Setup
+|Plugin|Easy To Setup       |No or Slow Sync
+
 
 The plugin checks a dictionary with a O(1) lookup time for the entered URL. A
 matching URL will hijack the current request and send an internal redirect to
