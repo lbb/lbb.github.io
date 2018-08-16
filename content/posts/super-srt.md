@@ -6,12 +6,12 @@ tags: ["intro","projects"]
 draft: false
 ---
 
-I saw several companies that had an internal tool that allows you to write short
-links in your browser. Finally using such a tool at Google increased my
+I've seen several companies that have an internal tool that allows you to write
+short links in your browser. Finally using such a tool at Google increased my
 productivity by a lot. Think of short links on steroids, instead of using other
 link services like "bit.ly" or "goo.gl" you can have links like `g/` for
-github.com or `m/` for your mail. I've built a Chrome extension that allows you
-to have such functionality in your browser, instead of setting up a private DNS.
+github.com or `m/` for your mail. I've built a chrome extension that adds this
+functionality to your browser, instead of setting up a private DNS.
 
 > _"[...] AOL keywords for the corporate network."_
 > Benjamin Staffin
@@ -40,13 +40,14 @@ downside that routes won't be synced imidealty or that they are availiable to
 everyone. But using a plugin is great for private users, that just want to
 have the productivity gain.
 
- |Pro|Con
----|---|---
-DNS| Instant Global Sync | Hard To Setup
-Plugin|Easy To Setup|No or Slow Sync
-The plugin checks
-a dictionary with a O(1) lookup time for the entered URL. A matching URL will
-hijack the current request and send an internal redirect to the Chrome engine.
+      |Pro                 |Con
+------|--------------------|--------------
+DNS   |Instant Global Sync | Hard To Setup
+Plugin|Easy To Setup       |No or Slow Sync
+
+The plugin checks a dictionary with a O(1) lookup time for the entered URL. A
+matching URL will hijack the current request and send an internal redirect to
+the Chrome engine.
 
 ```js
 function matchRedirectFunc(details) {
