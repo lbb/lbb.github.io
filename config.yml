@@ -1,0 +1,128 @@
+#baseURL = ""
+#languageCode = "en-us"
+#title = "Luk's"
+#enableEmoji = true
+#
+#theme = "PaperMod"
+#googleAnalytics = ""
+#
+#[params]
+#    navigation = ["blog.md","archives.md"]
+
+baseURL: "https://lbb.sh"
+title: Luk's Space
+paginate: 5
+theme: PaperMod
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: ""
+
+minify:
+    disableXML: true
+    minifyOutput: true
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    schema:
+      publisherType: Person
+    ShowCodeCopyButtons: true
+    title: Luk's Space
+    description: "Luk's Website Research & Co"
+    keywords: [Blog, Krew, Luk Burchard]
+    author: "Luk Burchard"
+    images: ["/assets/images/coffe_minimal.jpeg"]
+    DateFormat: "January 2, 2006"
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: true
+    ShowShareButtons: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: false
+    hidemeta: false
+    hideSummary: false
+    showtoc: false
+    tocopen: false
+    ShowShareButtons: false
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "assets/icons/bf.ico"
+        favicon16x16: ""
+        favicon32x32: ""
+        apple_touch_icon: "assets/icons/bf.png"
+        safari_pinned_tab: "assets/icons/bf.png"
+
+    label:
+        text: "Luk's Space"
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Hi there 👋"
+        Content: |-
+          This Blog is about my current research.
+          Here you can find my [📜 resume](assets/download/resume.pdf). 
+          Previously I worked for [Loodse/Kubermatic GmbH](https://loodse.com)
+          to build Kubermatic, a Kubernets centric distributed
+          Kubernetes Engine.
+          Later I interned at
+          **<span style="color: rgb(59, 135, 245);">G</span><span style="color: rgb(235, 64, 49);">o</span><span style="color: rgb(239, 177, 0);">o</span><span style="color: rgb(59, 135, 245);">g</span><span style="color: rgb(52, 168, 83);">l</span><span style="color: rgb(235, 64, 49);">e</span>**
+          to work with [Ahmet](https://ahmet.im/), building [Krew](https://krew.dev/) the kubectl plugin manager.
+          In my PhD, I am focusing on parallel computing using novel AI/ML hardware accelerators.
+
+    socialIcons:
+        - name: twitter
+          url: "https://twitter.com/lukburchard"
+        - name: github
+          url: "https://github.com/lbb"
+        - name: LinkedIn
+          url: "https://www.linkedin.com/in/lukburchard/"
+    analytics:
+        google:
+            SiteVerificationTag: "XYZabc"
+    cover:
+      cover:
+        hidden: false # hide everywhere but not in structured data
+        hiddenInList: false # hide on list pages and home
+        hiddenInSingle: false # hide on single page
+    editPost:
+        URL: "https://github.com/lbb/lbb.github.io/tree/master/content"
+        Text: "Suggest Changes" # edit text
+        appendFilePath: true # to append file path to Edit link
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+menu:
+    main:
+        - identifier: archive
+          name: Archive
+          url: /archives/
+          weight: 10
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 30
+pygmentsUseClasses: true
+markup:
+    highlight:
+        # anchorLineNos: true
+        codeFences: true
+        guessSyntax: true
+        lineNos: true
+        style: GitHub

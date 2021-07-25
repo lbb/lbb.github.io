@@ -2,6 +2,9 @@
 title: "Krew the Kubectl Plugin Manager"
 description: "What drove me to create krew?"
 date: 2018-08-08T12:14:00+02:00
+cover:
+  image: https://raw.githubusercontent.com/kubernetes-sigs/krew/master/assets/logo/horizontal/color/krew-horizontal-color.png
+  relative: false
 tags: ["intro","projects"]
 draft: false
 ---
@@ -13,7 +16,10 @@ I use krew to discover and install new plugins to my system. You should also
 start to use a kubectl plugin manager because manual installation of plugins is
 annoying.
 
-![demo](/img/demo_krew_intro.svg)
+<!-- ![demo](/img/demo_krew_intro.svg) -->
+
+
+{{< figure align=center src="/img/demo_krew_intro.svg" caption="A small screencast demo of krew" title="">}}
 
 ## Kubectl Plugins!
 
