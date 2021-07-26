@@ -4,6 +4,7 @@ description: "Cross post from mirgaeOS"
 date: 2018-08-03T12:14:00+02:00
 tags: ["conference", "mirageOS","OCaml", "report"]
 draft: false
+images: ["img/camel.jpeg"]
 cover:
   image: img/camel.jpeg
   relative: true

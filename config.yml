@@ -23,6 +23,7 @@ googleAnalytics: ""
 minify:
     disableXML: true
     minifyOutput: true
+
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     schema:
@@ -51,13 +52,13 @@ params:
     tocopen: false
     ShowShareButtons: false
     assets:
-        # disableHLJS: true # to disable highlight.js
         # disableFingerprinting: true
         favicon: "assets/icons/bf.ico"
         favicon16x16: ""
         favicon32x32: ""
         apple_touch_icon: "assets/icons/bf.png"
         safari_pinned_tab: "assets/icons/bf.png"
+
 
     label:
         text: "Luk's Space"
@@ -118,11 +119,3 @@ menu:
           name: Search
           url: /search/
           weight: 30
-pygmentsUseClasses: true
-markup:
-    highlight:
-        # anchorLineNos: true
-        codeFences: true
-        guessSyntax: true
-        lineNos: true
-        style: GitHub
