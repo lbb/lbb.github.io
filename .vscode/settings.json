@@ -3,5 +3,25 @@
 	"grammarly.goals": [
 	"tellStory"
 	],
-	"grammarly.audience": "general"
+	"grammarly.audience": "general",
+	"grammarly.overrides": [
+		{
+			"files": [
+				"**/content/posts/krew-intro.md"
+			],
+			"config": {
+				"audience": "general",
+				"dialect": "american",
+				"domain": "casual",
+				"emotions": [
+					"confident",
+					"joyful"
+				],
+				"goals": [
+					"describe",
+					"convince"
+				]
+			}
+		}
+	]
 }

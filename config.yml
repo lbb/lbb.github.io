@@ -33,7 +33,7 @@ params:
     description: "Luk's Website Research & Co"
     keywords: [Blog, Krew, Luk Burchard]
     author: "Luk Burchard"
-    images: ["/assets/images/coffe_minimal.jpeg"]
+    images: ["/assets/images/coffee_text.png"]
     DateFormat: "January 2, 2006"
     defaultTheme: auto # dark, light
     disableThemeToggle: false

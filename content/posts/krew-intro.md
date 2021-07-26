@@ -23,14 +23,28 @@ annoying.
 
 ## Kubectl Plugins!
 
-If you had asked me 4 months ago, I wouldn't be able to say if kubectl plugins
-exist. However, kubectl plugins exist [since kubernetes
-1.9](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.9.md),
-which is now almost a year ago. Plugins are fantastic: They help to organize
-commands under kubectl. Instead of having standalone binaries. They can now be
-integrated with kubectl. The
+If you had asked me 4 months before I wrote this, I would not be able to say if
+kubectl plugins exist. However, kubectl plugins exist [since kubernetes
+1.9](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.9.md). And
+apparently, plugins are fantastic: They help to organize commands under kubectl,
+instead of having standalone binaries. The
 [svcat](https://github.com/kubernetes-incubator/service-catalog/tree/master/cmd/svcat)
 plugin is a great example.
+
+Nonetheless, at the time of writing, almost no one knew about this kubectl plugin
+subsystem. We determined this to be a problem of discoverability, as projects
+were only advertising to be kubectl plugins on many project pages. Furthermore,
+there was a lack of proper "Awesone kubectl plugin" pages, wich usually collect
+all related information.
+
+The second big factor was lifecycle management. Kubectl plugins used to be
+installed manually for each project, leaving the downloading, upgrading, and
+moving of the install binary to the end-user. Many of the end-users associate
+this with too much friction, hindering the adoption of small plugins.
+
+With krew we want to solve the problem of discoverability and lifecycle management, to fuel the kubernetes kubectl plugin ecosystem. Aiming to make it easier to find and install plugins and give plugin developers tool to easily deploy and deliver their projects to the user.
+
+{{< figure align=center src="/img/krewlife.png" caption="Problem domains krew tries to solve." title="">}}
 
 Krew does the following things for you:
 
@@ -41,19 +55,19 @@ Krew does the following things for you:
 
 ## Where to Start?
 
-Install krew with this gist:
+Install krew with a straight forward command form [the official guide](https://krew.sigs.k8s.io/docs/user-guide/setup/install/).
 
-```bash
-curl -SsL https://gist.githubusercontent.com/lbb/1256c790/raw/ | bash
-```
+We have chosen a script to install krew, and it is not a bad thing. The formal reasoning
+behind this decision was the simplicity of distributing a plugin over
+using ten different package managers to reach all different platforms. We do not
+rely on other software package managers because krew itself is a kubectl plugin
+managed by krew. 
 
-We have chosen a script to install krew. It is not a bad thing. We don't rely on
-other software package managers, because krew itself is a kubectl plugin managed
-by krew.
+When looking at the last line of the install script, it can be observed that krew is a plugin itself: `"$KREW" install krew`. We call the temporarily downloaded krew to install itself.
 
-Once you got krew installed, you can install other plugins.
+Finally, once you got krew installed, you can install other plugins.
 
-Install the ca-cert plugin.
+We now, to display the capabilities of krew, want to install the _ca-cert_ plugin.
 
 ```bash
 kubectl plugin install ca-cert
@@ -68,6 +82,8 @@ Now we have `ca-cert` installed and can use it with:
 ```bash
 kubectl plugin ca-cert
 ```
+
+
 
 ## Future
 
