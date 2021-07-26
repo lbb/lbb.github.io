@@ -6,7 +6,7 @@ tags: ["intro","projects"]
 draft: false
 cover:
   image: img/share_crowd.jpeg
-  relative: true
+  relative: false
 ---
 
 During my short time as a developer visiting different companies, I have
